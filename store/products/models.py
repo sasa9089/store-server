@@ -7,7 +7,7 @@ class ProductCategory(models.Model):
     name = models.CharField(max_length=128, unique=True)
     description = models.TextField(null=True, blank=True)
 
-    class Meta: # русск яз
+    class Meta:
         verbose_name = 'category'
         verbose_name_plural = 'categories'
 
@@ -52,5 +52,3 @@ class Basket(models.Model):
 
     def sum(self):
         return self.product.price * self.quantity
-
-
